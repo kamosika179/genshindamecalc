@@ -52,9 +52,12 @@ class Main{
         Status ganyu = new Ganyutest(1861, 348,32.2,226.6, 61.6, 80);
         gm.calcDamage(ice, ganyu);*/
 
-        Status st = new Status();
-        st.set_value(".//キャラ//甘雨.csv");
-        st.printStatus();
+        Hillchurl hill = new Hillchurl();
+        Ganyu ganyu = new Ganyu();
+        Blackcliff blackcliff = new Blackcliff();
+
+        CalcDame calcDame = new CalcDame(ganyu,hill,blackcliff);
+        calcDame.print_normal_damege();
     }
 }
 }

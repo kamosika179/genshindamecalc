@@ -13,17 +13,19 @@ public class Status{
     int em;
     double crit_rate;
     double crit_dame;
+    double phy_buff;
+    double ele_buff;
 
     void set_value(String name){
         File file = new File(name);
         try(BufferedReader br = new BufferedReader(new FileReader(file));){
         String status_str = br.readLine();
-        System.out.println(status_str);
+        //System.out.println(status_str);
         
         while((status_str = br.readLine()) != null){
             String[] status_str_matrix = status_str.split(",");
             this.name = status_str_matrix[0];
-            this.name = status_str_matrix[1];
+            this.name_english = status_str_matrix[1];
             this.lv = Integer.parseInt(status_str_matrix[2]);
             this.hp = Integer.parseInt(status_str_matrix[3]);
             this.def = Integer.parseInt(status_str_matrix[4]);
@@ -34,6 +36,8 @@ public class Status{
             this.em = Integer.parseInt(status_str_matrix[9]);
             this.crit_rate = Double.parseDouble(status_str_matrix[10]);
             this.crit_dame = Double.parseDouble(status_str_matrix[11]);
+            this.phy_buff = Double.parseDouble(status_str_matrix[12]);
+            this.ele_buff = Double.parseDouble(status_str_matrix[13]);
         }
         br.close();
         }catch(FileNotFoundException e){
