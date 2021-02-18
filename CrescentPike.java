@@ -1,3 +1,0 @@
-class CrescentPike extends Weapon{
-     
-}

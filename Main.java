@@ -56,6 +56,7 @@ class Main{
         Ganyu ganyu = new Ganyu();
         Blackcliff blackcliff = new Blackcliff();
 
+        //ganyu.ele_buff = 0;
         CalcDame calcDame = new CalcDame(ganyu,hill,blackcliff);
         calcDame.print_normal_damege();
     }
