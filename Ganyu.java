@@ -37,6 +37,13 @@ public class Ganyu extends Character{
     }
     */
     
+    /*ファイルを読み込んで設定する。
+    意味わからんことになっていると思うので適当にまとめる。
+    最終的に得られるのは
+
+    ・normal_talent_name は　talent_name talent lv 一段目 ...などが入っている入れる（一行目）
+    ・normal_talent_magnificatino は　8 54.2 60.9 などが入っている　（二行目、数値だけ入ってる→長さが２短い）
+    ・normal_talent_buff は 0 1 2 の数値が入っている（0は名称、1は物理、2は元素） */
     void set_talent(String name){
         File file = new File(name);
         try(BufferedReader br = new BufferedReader(new FileReader(file));){

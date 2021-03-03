@@ -9,11 +9,15 @@ public class Artifact {
     double atk_par;
     double def_par;
     double hp_par;
-    double damebuff;
+    double phy_buff;
+    double ele_buff;
     int Elemental_Mastery;
     double crit_rate;
     double crit_dame;
     static Map<String,Double> grouth_rate = new HashMap<>();
+
+    //サブオフションの強化回数
+    int count_subop_increse = 5;
     
     Artifact(){
         grouth_rate.put("atk",18.0);
@@ -50,11 +54,11 @@ public class Artifact {
     }
 
     void set_main_element_damebuff(){
-        damebuff = 46.6;
+        ele_buff = 46.6;
     }
 
     void set_main_physics_damebuff(){
-        damebuff = 58.3;
+        phy_buff = 58.3;
     }
 
     void set_main_crit_rate(){

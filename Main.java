@@ -56,9 +56,38 @@ class Main{
         Ganyu ganyu = new Ganyu();
         Blackcliff blackcliff = new Blackcliff();
 
+        Artifact floweArtifact = new Artifact();
+        Artifact featherArtifact = new Artifact();
+        Artifact hourglass = new Artifact();
+        Artifact cupArtifact = new Artifact();
+        Artifact hatArtifact = new Artifact();
+
+        //遺物の設定
+        hourglass.set_main_atk_per();;
+        cupArtifact.set_main_element_damebuff();
+        hatArtifact.set_main_crit_dame();
+
+        floweArtifact.crit_dame += floweArtifact.grouth_rate.get("crit_dame") * 3;
+        floweArtifact.crit_dame += floweArtifact.grouth_rate.get("crit_dame") * 3;
+        floweArtifact.crit_dame += floweArtifact.grouth_rate.get("crit_dame") * 3;
+        floweArtifact.crit_dame += floweArtifact.grouth_rate.get("crit_dame") * 3;
+        floweArtifact.atk_par += featherArtifact.grouth_rate.get("atk_per") * 6;
+
         //ganyu.ele_buff = 0;
         CalcDame calcDame = new CalcDame(ganyu,hill,blackcliff);
+
+        //遺物の追加
+        calcDame.setArtifact(floweArtifact);
+        calcDame.setArtifact(featherArtifact);
+        calcDame.setArtifact(hourglass);
+        calcDame.setArtifact(cupArtifact);
+        calcDame.setArtifact(hatArtifact);
+
         calcDame.print_normal_damege();
+
+        calcDame.print_status();
+
+        System.out.println(ganyu.ele_buff);
     }
 }
 }

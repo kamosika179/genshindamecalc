@@ -16,6 +16,7 @@ public class Status{
     double phy_buff;
     double ele_buff;
 
+    /*status_strは最初に一行目を読み出して、二行目を加工して色々入れていく */
     void set_value(String name){
         File file = new File(name);
         try(BufferedReader br = new BufferedReader(new FileReader(file));){
